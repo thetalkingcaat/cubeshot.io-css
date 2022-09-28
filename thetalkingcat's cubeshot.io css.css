@@ -1,9 +1,10 @@
 /*
 Name: thetalkingcat's cubeshot.io css
-Version: v1.0.6.1
+Version: v1.1.0
 
 Use Stylus Extension to inject this css
 */
+
 /* Rainbow Text*/
 @keyframes rainbow {
     100%,
@@ -191,6 +192,7 @@ player-kills.svelte-czp1mf span.svelte-czp1mf {
 username-input.svelte-1x37ypf input.svelte-1x37ypf {
     font-size: 1.7vw;
     border-radius: 100px;
+    top: 120%;
 }
 
 /*Logo*/
@@ -248,20 +250,6 @@ blood-display.svelte-qlap5v img.svelte-qlap5v {
     display: none;
 }
 
-/*Server UI*/
-mode-entries.svelte-1kjed7m span[data-active=true].svelte-1kjed7m {
-    color: #fff
-}
-
-.mode.svelte-7ts1i {
-    font-weight: 700;
-    color: #fff
-}
-
-mode-entries.svelte-1kjed7m span.svelte-1kjed7m {
-    border-radius: 100px;
-}
-
 /*Top Left Info*/
 .topLeft.svelte-1x37ypf.svelte-1x37ypf {
     background: #00000036;
@@ -274,7 +262,83 @@ mode-entries.svelte-1kjed7m span.svelte-1kjed7m {
     transition: .7s
 }
 
-/*How To Play*/
+/*How To Play Display*/
 .guideHolder.svelte-1x37ypf.svelte-1x37ypf {
     display: none;
+}
+
+/*Classes UI*/
+loadout-entry.svelte-1okfwdr.svelte-1okfwdr,
+classes-entry.svelte-1okfwdr.svelte-1okfwdr {
+    color: #fff;
+    font-size: 3.1vw;
+}
+.play.svelte-1okfwdr.svelte-1okfwdr {
+    font-size: 1.9vw;
+    transition: transform .5s ease-in-out, color .5s ease-in-out;
+    color: gray
+}
+.play.svelte-1okfwdr.svelte-1okfwdr:hover {
+    transform: scale(1.3);
+    color: #fff
+}
+class-entry.svelte-1okfwdr.svelte-1okfwdr {
+    gap: 2vw;
+}
+class-entry.svelte-1okfwdr .icon.svelte-1okfwdr {
+    border-radius: 100px;
+    background-color: transparent
+}
+class-entry.svelte-1okfwdr img.svelte-1okfwdr {
+    border-radius: 100px
+}
+.anchor.svelte-1okfwdr.svelte-1okfwdr:hover {
+    transform: scale(1.2);
+    transition: transform .75s ease-in-out;
+}
+
+/*Server UI*/
+mode-entries.svelte-1kjed7m span[data-active=true].svelte-1kjed7m {
+    color: #fff;
+    background: transparent;
+}
+
+.mode.svelte-7ts1i {
+    font-weight: 700;
+    color: #fff
+}
+
+mode-entries.svelte-1kjed7m span.svelte-1kjed7m {
+    border-radius: 100px;
+    background: transparent
+}
+
+/*UI*/
+modal-entry.svelte-16cb4xp.svelte-16cb4xp {
+    background: transparent;
+}
+
+modal-container.svelte-16cb4xp.svelte-16cb4xp {
+    background: #00000036;
+    top: 38%;
+    border-radius: 30px;
+    box-shadow: transparent;
+    transition: all 3s;
+    transform: translate(-50%, -50%) scale(0.8)
+}
+
+modal-container[data-state=open].svelte-16cb4xp.svelte-16cb4xp {
+    opacity: 1;
+    animation: svelte-16cb4xp-bubble 4s ease 0s 1 normal none;
+}
+modal-container[data-state=close].svelte-16cb4xp.svelte-16cb4xp {
+    opacity: 0;
+}
+
+.title.svelte-etlhhs.svelte-etlhhs {
+    background: transparent;
+}
+
+.title.svelte-etlhhs.svelte-etlhhs:hover {
+    background: transparent
 }
