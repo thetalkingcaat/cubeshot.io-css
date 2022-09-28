@@ -1,7 +1,6 @@
 /*
 Name: thetalkingcat's cubeshot.io css
-Version: v1.0.5.2
-Changes: Fixed error menu css after new minor update
+Version: v1.0.6
 
 Use Stylus Extension to inject this css
 */
@@ -193,9 +192,10 @@ username-input.svelte-1x37ypf input.svelte-1x37ypf {
     font-size: 1.7vw;
     border-radius: 100px;
 }
+
 /*Logo*/
 .logo.svelte-1x37ypf.svelte-1x37ypf {
-    height: 15vw;
+    display: none;
 }
 /*Menu*/
 menu-options.svelte-1x37ypf.svelte-1x37ypf {
@@ -218,6 +218,23 @@ map-info.svelte-gj3nk1 .mode.svelte-gj3nk1 {
     color: rgb(255, 115, 115)
 }
 
+/*New Game Button*/
+button-list.svelte-1kn2qqb {
+    display: flex;
+    margin: 2vw;
+    margin-top: 0;
+    gap: 1vw;
+    background: transparent;
+}
+button.svelte-1kn2qqb {
+    background: transparent;
+    font-size: 2.5vw;
+    transition: all 1.1s
+}
+button.svelte-1kn2qqb:hover {
+    transform: scale(1.25);
+}
+
 /*Weapon Icon*/
 player-weapon-display.svelte-1sk37b4.svelte-1sk37b4 {
     display: none;
@@ -234,4 +251,29 @@ blood-display.svelte-qlap5v img.svelte-qlap5v {
 /*Server UI*/
 mode-entries.svelte-1kjed7m span[data-active=true].svelte-1kjed7m {
     color: #fff
+}
+
+.mode.svelte-7ts1i {
+    font-weight: 700;
+    color: #fff
+}
+
+mode-entries.svelte-1kjed7m span.svelte-1kjed7m {
+    border-radius: 100px;
+}
+
+/*Top Left Info*/
+.topLeft.svelte-1x37ypf.svelte-1x37ypf {
+    background: #00000036;
+}
+
+.topLeft.svelte-1x37ypf a.svelte-1x37ypf:hover {
+    text-decoration: none;
+    font-size: 1.6vw;
+    transition: .7s
+}
+
+/*How To Play*/
+.guideHolder.svelte-1x37ypf.svelte-1x37ypf {
+    display: none;
 }
