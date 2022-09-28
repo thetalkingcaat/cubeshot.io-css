@@ -1,568 +1,237 @@
 /*
 Name: thetalkingcat's cubeshot.io css
-Version: v1.0.5.1
-Changes: Fixed CSS after new minor update
+Version: v1.0.5.2
+Changes: Fixed error menu css after new minor update
 
 Use Stylus Extension to inject this css
 */
-
 /* Rainbow Text*/
-
-@keyframes rainbow{
-    100%,0%{
-        color: rgb(255,0,0);
+@keyframes rainbow {
+    100%,
+    0% {
+        color: rgb(255, 0, 0);
     }
-    8%{
-        color: rgb(255,127,0);
+    8% {
+        color: rgb(255, 127, 0);
     }
-    16%{
-        color: rgb(255,255,0);
+    16% {
+        color: rgb(255, 255, 0);
     }
-    25%{
-        color: rgb(127,255,0);
+    25% {
+        color: rgb(127, 255, 0);
     }
-    33%{
-        color: rgb(0,255,0);
+    33% {
+        color: rgb(0, 255, 0);
     }
-    41%{
-        color: rgb(0,255,127);
+    41% {
+        color: rgb(0, 255, 127);
     }
-    50%{
-        color: rgb(0,255,255);
+    50% {
+        color: rgb(0, 255, 255);
     }
-    58%{
-        color: rgb(0,127,255);
+    58% {
+        color: rgb(0, 127, 255);
     }
-    66%{
-        color: rgb(0,0,255);
+    66% {
+        color: rgb(0, 0, 255);
     }
-    75%{
-        color: rgb(127,0,255);
+    75% {
+        color: rgb(127, 0, 255);
     }
-    83%{
-        color: rgb(255,0,255);
+    83% {
+        color: rgb(255, 0, 255);
     }
-    91%{
-        color: rgb(255,0,127);
+    91% {
+        color: rgb(255, 0, 127);
     }
 }
 .text[data-me=true].svelte-xztcpl.svelte-xztcpl {
-animation: rainbow 2.5s linear infinite;
+    animation: rainbow 2.5s linear infinite;
 }
 
 endboard-player[data-isYou=true].svelte-11jxrum.svelte-11jxrum.svelte-11jxrum {
-animation: rainbow 2.5s linear infinite;
+    animation: rainbow 2.5s linear infinite;
 }
 
 strong.svelte-10o8s4f {
-font-size: 3.5vw;
-font-weight: 700;
-animation: rainbow 2.5s linear infinite
+    font-size: 3.5vw;
+    font-weight: 700;
+    animation: rainbow 2.5s linear infinite
 }
 
 /* Game Timer*/
 game-time.svelte-sswfbw {
-position: fixed;
-top: 0;
-left: 1050px;
-gap: .6vw;
-font-size: 2vw;
-font-family: Motion Control;
-padding: .5vw 1vw;
-border-radius: 100px;
-color: #fff;
-background: #00000036;
-letter-spacing: .1vw;
-margin: 1vw;
-display: flex;
+    position: fixed;
+    top: 0;
+    left: 1050px;
+    gap: .6vw;
+    font-size: 2vw;
+    border-radius: 100px;
+    letter-spacing: .1vw;
+    display: flex;
 }
 /* Health Bar*/
 player-health.svelte-ilri4k.svelte-ilri4k {
---value: 0%;
-height: 3vw;
-width: 20vw;
-border-radius: 100px;
-left: 250%;
-overflow: hidden;
-background: transparent;
-position: relative
+    --value: 0%;
+    height: 3vw;
+    width: 20vw;
+    border-radius: 100px;
+    left: 250%;
+    overflow: hidden;
+    background: transparent;
+    position: relative
 }
 player-health[data-low=true].svelte-ilri4k .indicator.svelte-ilri4k {
-background: rgb(255, 115, 115)
+    background: rgb(255, 115, 115)
 }
 .indicator.svelte-ilri4k.svelte-ilri4k {
-height: 100% !important;
-transition: width 1.25s ease-in-out;
-width: var(--value, 0%);
-border-radius: 100px !important;
-display: flex;
-background: #91ff91
+    height: 100% !important;
+    transition: width 1.25s ease-in-out;
+    border-radius: 100px !important;
+    background: #91ff91
 }
 
 /*Chat*/
 message-entry.svelte-y1dwy4 {
---speed: .1s;
-padding: .5vw;
-background: rgba(0, 0, 0, .2);
-border-radius: .1vw;
-display: block;
-border-radius: 100px;
-transition: transform var(--speed) ease-in-out, color var(--speed) ease-in-out, opacity 0.1s ease-in-out
+    background: rgba(0, 0, 0, .2);
+    border-radius: .1vw;
+    border-radius: 100px;
+    transition: transform var(--speed) ease-in-out, color var(--speed) ease-in-out, opacity 0.1s ease-in-out
 }
 .text.svelte-y1dwy4 {
-color: #ffffff6b;
-font-size: 1.2vw;
-overflow-wrap: break-word
+    font-size: 1.2vw;
 }
 .username.svelte-y1dwy4 {
-font-size: 1.3vw
+    font-size: 1.3vw
 }
 message-entry.svelte-y1dwy4:hover {
-border-radius: 100px;
-display: block;
+    border-radius: 100px;
 }
 chat-entry.svelte-12jqi05 {
-position: absolute;
-bottom: 0px;
-left: 0;
-margin: 1vw;
-gap: .5vw;
-display: flex;
-flex-direction: column;
-border-radius: 100px;
-width: 15vw;
+    border-radius: 100px;
 }
 chat-list.svelte-12jqi05 {
-max-height: 75vh;
-overflow: auto;
-display: flex;
-flex-direction: column;
-gap: .2vw;
-padding-bottom: 0;
-font-size: 1vw;
-color: #fff;
-border-radius: 1px;
-font-family: Motion Control;
-
+    max-height: 75vh;
 }
 /*Ammo*/
 player-ammo.svelte-1quzmtf {
-position: absolute;
-bottom: 0;
-right: 0;
-gap: 1vw;
-font-size: 2vw;
-font-family: Motion Control;
-padding: .5vw 1vw;
-border-radius: 100px;
-color: #fff;
-background: #00000036;
-letter-spacing: .1vw;
-margin: 1vw;
-display: flex
-}
-.clip.svelte-1quzmtf {
-font-size: 2.5vw;
-color: #ffffffa3
-}
-span.svelte-1quzmtf {
-margin-top: auto;
-margin-bottom: auto;
-display: flex
-}
-img.svelte-1quzmtf {
-height: 1.25vw;
-display: flex;
-margin-top: auto;
-margin-bottom: auto
+    font-size: 2vw;;
+    border-radius: 100px;
+    color: #fff;
+    background: #00000036;
+    letter-spacing: .2vw;
+
 }
 
 /*Tab List*/
 .text.svelte-xztcpl.svelte-xztcpl {
-color: rgb(255, 115, 115)
+    color: rgb(255, 115, 115)
 }
 .text[data-teamate=true].svelte-xztcpl.svelte-xztcpl {
-color: #91ff91
-}
-.text.svelte-1kvp0kd.svelte-1kvp0kd {
-margin-top: auto;
-margin-bottom: auto;
-display: inline-flex
-}
-td.svelte-1kvp0kd.svelte-1kvp0kd {
-text-align: left
-}
-player-entry[data-rank="0"][data-loser=false].svelte-11jxrum.svelte-11jxrum.svelte-11jxrum {
---rank: 16%
-}
-player-entry[data-rank="1"][data-loser=false].svelte-11jxrum.svelte-11jxrum.svelte-11jxrum {
---rank: 10%
-}
-player-entry[data-rank="2"][data-loser=false].svelte-11jxrum.svelte-11jxrum.svelte-11jxrum {
---rank: 1%
-}
-endboard-player[data-teamate=true].svelte-11jxrum.svelte-11jxrum.svelte-11jxrum {
---color: #91ff91
-}
-endboard-player[data-teamate=false].svelte-11jxrum.svelte-11jxrum.svelte-11jxrum {
---color: rgb(255, 115, 115)
-}
-.icon.svelte-11jxrum.svelte-11jxrum.svelte-11jxrum {
---size: 1.2vw
-}
-.icon.svelte-11jxrum i.svelte-11jxrum.svelte-11jxrum {
-font-size: var(--size)
-}
-.icon.svelte-11jxrum img.svelte-11jxrum.svelte-11jxrum {
-width: var(--size);
-height: var(--size)
-}
-endboard-player[data-loser=true].svelte-11jxrum .icon.svelte-11jxrum.svelte-11jxrum {
---size: 1vw
-}
-endboard-entry.svelte-1q2ohx0 {
-position: absolute;
-top: 0;
-left: 0;
-display: flex;
-gap: 1vw;
-height: 100%;
-width: 100%;
-z-index: 3;
-background-color: #00000091;
-overflow: auto;
-overflow: hidden;
-backdrop-filter: blur(14px)
-}
-player-list.svelte-1q2ohx0 {
-display: flex;
-align-items: center;
-justify-content: center;
-height: 100%;
-width: 100%;
-gap: 1vw
-}
-losers-list.svelte-1q2ohx0 {
-display: flex;
-flex-direction: column;
-gap: 1vw;
-position: absolute;
-top: 0;
-left: 0;
-margin: 1vw;
-max-width: 100%;
-overflow: scroll
-}
-losers-list.svelte-1q2ohx0::-webkit-scrollbar {
-display: none
-}
-losers-list.svelte-1q2ohx0 {
--ms-overflow-style: none;
-scrollbar-width: none
-}
-.team.svelte-jc9r2 {
-position: relative
+    color: #91ff91
 }
 leaderboard-entry.svelte-jc9r2 {
-position: absolute;
-top: 50%;
-left: 50%;
-transform: translate(-50%, -50%);
-width: 35vw;
-max-height: 85vh;
-height: fit-content;
-display: flex;
-flex-direction: column;
-padding: 1vw;
-font-family: Motion Control;
-color: #ffffffd6
-}
-table.svelte-jc9r2 {
-background-color: #06060653;
-border-radius: .3vw;
-overflow-y: auto
-}
-tr.svelte-jc9r2 {
-display: flex
-}
-leaderboard-entry[data-open=true].svelte-jc9r2 {
-opacity: 1;
-transform: translate(-50%, -50%) scale(1)
-}
-leaderboard-entry[data-open=false].svelte-jc9r2 {
-opacity: 0;
-transform: translate(-50%, -50%) scale(.9)
-}
-table.svelte-jc9r2 {
-border-collapse: collapse;
-width: 100%;
-display: flex;
-flex-direction: column;
-padding: 1vw;
-gap: 1vw
-}
-th.svelte-jc9r2 {
-color: #fff;
-font-size: 2vw;
-width: 13vw
-}
-th.svelte-jc9r2 {
-text-align: left
+    top: 50%;
+    left: 50%;
+    max-height: 85vh;
 }
 /*Elimination Points*/
-reward-label.svelte-m6vbr9 {
-transition: all 25s;
-transform: translate(2vw);
-opacity: 0
-}
-reward-label[data-active=true].svelte-m6vbr9 {
-transition: all .25s;
-transform: translate(0);
-opacity: 1
-}
 reward-entry.svelte-10o8s4f {
-transition: all .5s;
-transform: translate(2vw);
-opacity: 0
-}
-reward-entry[data-active=true].svelte-10o8s4f {
-transform: translate(0);
-opacity: 1
-}
-reward-entry.svelte-10o8s4f {
-position: fixed;
-font-family: Motion Control;
-top: 50px;
-right: 450px;
-display: flex;
-flex-direction: column;
-font-size: 2vw;
-text-align: left;
-color: #fff;
-gap: .6vw;
-z-index: 1;
-width: 20vw;
-text-shadow: 0 0 11px black
+    position: fixed;
+    top: 50px;
+    right: 450px;
+    display: flex;
+    font-size: 2vw;
 }
 /*Hit Marker*/
 hitmarker-entry[data-active=true].svelte-sj8fm {
-color: rgb(255, 115, 115);
-opacity: 0.1
+    color: rgb(255, 115, 115);
+    opacity: 0.1
 }
 
 /*Game End Board*/
-game-status-text[data-victory=true].svelte-1brblo8 {
-color: #ffc107;
---color: #ff9800
-}
-game-status-text[data-victory=false].svelte-1brblo8 {
-color: #ff8985;
---color: #b60000
-}
-board-entry[data-open=false].svelte-1brblo8 {
-display: none
-}
 game-status-text.svelte-1brblo8 {
-font-family: Motion Control;
-font-size: 8.5vw;
-font-weight: 700;
-margin-left: auto;
-margin-right: auto;
-display: flex;
-text-shadow: 0 .1vw 0 var(--color), 0 .2vw 0 var(--color), 0 .3vw 0 var(--color), 0 .4vw 0 var(--color), 0 .5vw 0 var(--color), 0 .6vw 0 var(--color)
+    font-size: 8.5vw;
 }
 leaderboard-entry.svelte-1brblo8 {
-position: absolute;
-top: 50%;
-left: 50%;
-transform: translate(-50%, -50%);
-width: 35vw;
-max-height: 85vh;
-height: fit-content;
-display: flex;
-flex-direction: column;
-padding: 1vw;
-font-family: Motion Control;
-color: #ffffffd6;
-transition: opacity .1s ease-in-out, transform .2s cubic-bezier(.175, .885, .32, 2.275)
-}
-table.svelte-1brblo8 {
-background-color: #06060653;
-border-radius: 10px;
-overflow-y: auto
-}
-tr.svelte-1brblo8 {
-display: flex
-}
-table.svelte-1brblo8 {
-border-collapse: collapse;
-width: 100%;
-display: flex;
-flex-direction: column;
-padding: 1vw;
-gap: 1vw
+    display: flex;
 }
 th.svelte-1brblo8 {
-color: #fff;
-font-size: 2vw;
-width: 13vw
+    color: #fff;
+    font-size: 2vw;
 }
 th.svelte-1brblo8 {
-text-align: left
+    text-align: left
+}
+
+endboard-player[data-teamate=true].svelte-11jxrum.svelte-11jxrum.svelte-11jxrum {
+    --color: #91ff91
+}
+endboard-player[data-teamate=false].svelte-11jxrum.svelte-11jxrum.svelte-11jxrum {
+    --color: rgb(255, 115, 115)
 }
 /*FPS & Ping*/
-stat-item.svelte-1rhpu7j {
-display: flex;
-gap: .4vw
-}
-stat-item[data-visible=false].svelte-1rhpu7j,
-game-stats[data-visible=false].svelte-1rhpu7j {
-display: none
-}
-.signal.svelte-1rhpu7j {
-filter: invert(1);
-height: 2vw;
-display: flex;
-margin-top: auto;
-margin-bottom: auto
-}
 game-stats.svelte-1rhpu7j {
-position: fixed;
-top: 0vw;
-left: 870px;
-gap: 1.4vw;
-font-size: 2vw;
-font-family: Motion Control;
-padding: .5vw 1vw;
-border-radius: 100px;
-color: #fff;
-background: #00000036;
-letter-spacing: .1vw;
-margin: 1vw;
-display: flex;
-}
-span.svelte-1rhpu7j {
-margin-top: auto;
-margin-bottom: auto;
-display: flex
-}
-game-interface.svelte-czp1mf.svelte-czp1mf {
---opacity: 1;
-opacity: var(--opacity);
-transition: opacity .1s ease-in-out
+    position: fixed;
+    top: 0vw;
+    left: 870px;
+    gap: 1.4vw;
+    font-size: 2vw;
+    border-radius: 100px;
 }
 /*Kill Counter*/
 player-kills.svelte-czp1mf.svelte-czp1mf {
-display: flex;
-align-items: center;
-justify-content: center;
-font-size: 1.5vw;
-margin: 1vw;
-position: absolute;
-top: 0;
-right: 7px;
-background: #00000036;
-padding: .5vw 1vw;
-border-radius: 100px;
-gap: .6vw
-}
-player-kills.svelte-czp1mf img.svelte-czp1mf {
-width: 2.2vw;
-height: 2.2vw
+    font-size: 1.5vw;
+    border-radius: 100px;
 }
 player-kills.svelte-czp1mf span.svelte-czp1mf {
-font-family: Motion Control;
-color: #fff;
-font-size: 1.5vw
+    font-size: 1.5vw
 }
 
 /*Username Input*/
-username-input.svelte-1x37ypf.svelte-1x37ypf {
-margin-left: auto;
-margin-right: auto
-}
 username-input.svelte-1x37ypf input.svelte-1x37ypf {
-padding: .5vw .5vw .5vw 1vw;
-border: none;
-background: rgba(0, 0, 0, .2509803922);
-font-size: 1.5vw;
-width: 15vw;
-color: #fff;
-border-radius: 100px;
-font-family: Motion Control
-}
-username-input.svelte-1x37ypf input.svelte-1x37ypf::placeholder {
-color: #ffffff9b
+    font-size: 1.7vw;
+    border-radius: 100px;
 }
 /*Logo*/
 .logo.svelte-1x37ypf.svelte-1x37ypf {
-height: 15vw;
-width: auto
+    height: 15vw;
 }
 /*Menu*/
-menu-entry.svelte-1x37ypf.svelte-1x37ypf {
-transform: translate(-50%, -50%);
-position: absolute;
-left: 50%;
-bottom: 0vw;
-display: flex;
-flex-direction: column;
-width: fit-content;
-gap: 2vh
-}
-menu-tools.svelte-1x37ypf.svelte-1x37ypf {
-position: absolute;
-top: 0;
-right: 0;
-margin: 2vw;
-display: flex;
-flex-direction: row;
-justify-content: flex-end;
-width: fit-content;
-float: right;
-margin-left: auto;
-gap: 2vh
-}
 menu-options.svelte-1x37ypf.svelte-1x37ypf {
-display: flex;
-gap: 3vw;
-padding-bottom: 0;
-color: #fff;
-font-family: Motion Control;
-background: rgba(0, 0, 0, .2705882353);
-padding: 1vw 3vw;
-border-radius: 100px;
-height: 4vw
+    gap: 3.9vw;
+    border-radius: 100px;
+    height: 4vw
 }
 /* Map Info*/
 map-info.svelte-gj3nk1 .name.svelte-gj3nk1 {
-display: none;
+    display: none;
 }
 /*Gamemode Info*/
 map-info.svelte-gj3nk1 .mode.svelte-gj3nk1 {
-display: none;
+    display: none;
 }
 
 /*Error Text*/
-.error.svelte-19z4vh7 {
-margin: auto;
-width: fit-content;
-display: flex;
-text-align: center;
-font-family: Motion Control;
-font-size: 4vw;
-color: rgb(255, 115, 115)
+.error.svelte-1kn2qqb {
+    font-size: 4vw;
+    color: rgb(255, 115, 115)
 }
 
 /*Weapon Icon*/
 player-weapon-display.svelte-1sk37b4.svelte-1sk37b4 {
-display:none;
+    display: none;
 }
 
 /*Blood Display*/
 blood-display.svelte-qlap5v.svelte-qlap5v {
-display: none;
+    display: none;
 }
 blood-display.svelte-qlap5v img.svelte-qlap5v {
-display: none;
+    display: none;
+}
+
+/*Server UI*/
+mode-entries.svelte-1kjed7m span[data-active=true].svelte-1kjed7m {
+    color: #fff
 }
