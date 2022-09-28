@@ -1,6 +1,6 @@
 /*
 Name: thetalkingcat's cubeshot.io css
-Version: v1.0.6
+Version: v1.0.6.1
 
 Use Stylus Extension to inject this css
 */
@@ -265,6 +265,7 @@ mode-entries.svelte-1kjed7m span.svelte-1kjed7m {
 /*Top Left Info*/
 .topLeft.svelte-1x37ypf.svelte-1x37ypf {
     background: #00000036;
+    border-radius: 15px;
 }
 
 .topLeft.svelte-1x37ypf a.svelte-1x37ypf:hover {
