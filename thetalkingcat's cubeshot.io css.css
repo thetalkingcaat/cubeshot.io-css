@@ -1,6 +1,6 @@
 /*
 Name: thetalkingcat's cubeshot.io css
-Version: v1.1.0
+Version: v1.1.1
 
 Use Stylus Extension to inject this css
 */
@@ -297,6 +297,10 @@ class-entry.svelte-1okfwdr img.svelte-1okfwdr {
     transition: transform .75s ease-in-out;
 }
 
+.anchor.svelte-1okfwdr.svelte-1okfwdr:hover {
+    text-decoration: none;
+}
+
 /*Server UI*/
 mode-entries.svelte-1kjed7m span[data-active=true].svelte-1kjed7m {
     color: #fff;
@@ -313,7 +317,11 @@ mode-entries.svelte-1kjed7m span.svelte-1kjed7m {
     background: transparent
 }
 
-/*UI*/
+/*More UI*/
+:root {
+    --anchor: #00000036;
+}
+
 modal-entry.svelte-16cb4xp.svelte-16cb4xp {
     background: transparent;
 }
@@ -341,4 +349,35 @@ modal-container[data-state=close].svelte-16cb4xp.svelte-16cb4xp {
 
 .title.svelte-etlhhs.svelte-etlhhs:hover {
     background: transparent
+}
+
+side-item.svelte-tqacjx:hover .text.svelte-tqacjx {
+    display: block;
+    transform: translateY(-15%) scale(1.2);
+    color: #fff;
+    transition: transform .75s ease-in-out;
+    text-shadow: 0 1px 0 transparent, 0 2px 0 transparent, 0 3px 0 transparent, 0 4px 0 transparent, 0 5px 0 transparent, 0 6px 0 transparent
+}
+
+/* Settings UI*/
+.button.delete.svelte-19xmdkt.svelte-19xmdkt {
+    color: #fff
+}
+.button.svelte-19xmdkt:hover i.svelte-19xmdkt {
+    transform: scale(1.5);
+    transition: transform .75s ease-in-out;
+    color: #fff
+}
+
+/*Scroll Track*/
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+::-webkit-scrollbar-thumb {
+    background-color: transparent;
+}
+
+/*Click To Play Display*/
+.svelte-8yebgp {
+    font-size: 0vw !important;
 }
