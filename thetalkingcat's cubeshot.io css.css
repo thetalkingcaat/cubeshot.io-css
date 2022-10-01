@@ -1,6 +1,6 @@
 /*
 Name: thetalkingcat's cubeshot.io css
-Version: v1.1.1
+Version: v1.1.2
 
 Use Stylus Extension to inject this css
 */
@@ -45,7 +45,7 @@ Use Stylus Extension to inject this css
         color: rgb(255, 0, 127);
     }
 }
-.text[data-me=true].svelte-xztcpl.svelte-xztcpl {
+.text[data-me=true].svelte-1jdbwvh.svelte-1jdbwvh {
     animation: rainbow 2.5s linear infinite;
 }
 
@@ -124,13 +124,13 @@ player-ammo.svelte-1quzmtf {
 }
 
 /*Tab List*/
-.text.svelte-xztcpl.svelte-xztcpl {
+.text.svelte-1jdbwvh.svelte-1jdbwvh {
     color: rgb(255, 115, 115)
 }
-.text[data-teamate=true].svelte-xztcpl.svelte-xztcpl {
+.text[data-teamate=true].svelte-1jdbwvh.svelte-1jdbwv {
     color: #91ff91
 }
-leaderboard-entry.svelte-jc9r2 {
+leaderboard-entry.svelte-1m58059 {
     top: 50%;
     left: 50%;
     max-height: 85vh;
@@ -189,22 +189,21 @@ player-kills.svelte-czp1mf span.svelte-czp1mf {
 }
 
 /*Username Input*/
-username-input.svelte-1x37ypf input.svelte-1x37ypf {
+username-input.svelte-1hkvi8c input.svelte-1hkvi8c {
     font-size: 1.7vw;
     border-radius: 100px;
     top: 120%;
 }
 
 /*Logo*/
-.logo.svelte-1x37ypf.svelte-1x37ypf {
+.logo.svelte-1hkvi8c {
     display: none;
 }
 /*Menu*/
-menu-options.svelte-1x37ypf.svelte-1x37ypf {
-    gap: 3.9vw;
-    border-radius: 100px;
-    height: 4vw
+.svelte-1hkvi8c {
+    border-radius: 100px !important;
 }
+
 /* Map Info*/
 map-info.svelte-gj3nk1 .name.svelte-gj3nk1 {
     display: none;
@@ -251,20 +250,21 @@ blood-display.svelte-qlap5v img.svelte-qlap5v {
 }
 
 /*Top Left Info*/
-.topLeft.svelte-1x37ypf.svelte-1x37ypf {
+.topLeft.svelte-1hkvi8c {
     background: #00000036;
-    border-radius: 15px;
+    border-radius: 15px !important;
 }
 
-.topLeft.svelte-1x37ypf a.svelte-1x37ypf:hover {
-    text-decoration: none;
-    font-size: 1.6vw;
+.topLeft.svelte-1hkvi8c a.svelte-1hkvi8c:hover {
+    text-decoration: none !important;
+    font-size: 1.7vw;
     transition: .7s
 }
 
+
 /*How To Play Display*/
-.guideHolder.svelte-1x37ypf.svelte-1x37ypf {
-    display: none;
+.guideHolder.svelte-1hkvi8c {
+    display: none !important;
 }
 
 /*Classes UI*/
@@ -353,9 +353,9 @@ modal-container[data-state=close].svelte-16cb4xp.svelte-16cb4xp {
 
 side-item.svelte-tqacjx:hover .text.svelte-tqacjx {
     display: block;
-    transform: translateY(-15%) scale(1.2);
+    transform: translateY(-10%) scale(1.3);
     color: #fff;
-    transition: transform .75s ease-in-out;
+    transition: transform 1s ease-in-out;
     text-shadow: 0 1px 0 transparent, 0 2px 0 transparent, 0 3px 0 transparent, 0 4px 0 transparent, 0 5px 0 transparent, 0 6px 0 transparent
 }
 
@@ -380,4 +380,17 @@ side-item.svelte-tqacjx:hover .text.svelte-tqacjx {
 /*Click To Play Display*/
 .svelte-8yebgp {
     font-size: 0vw !important;
+}
+
+/*Ad Blocker*/
+.menu-left-adholder.svelte-1hkvi8c {
+    display: none;
+}
+ 
+.menu-bottom-adholder.svelte-1hkvi8c {
+    display: none;
+}
+
+.end-bottom-adholder.svelte-15p5mh4.svelte-15p5mh4 {
+    display: none;
 }
